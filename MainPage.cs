@@ -245,22 +245,22 @@ namespace req_covid19
                 }
             }
 
-            //// Jun
-            //foreach (var item in postDataSumCases)
-            //{
-            //    if (item)
-            //    {
-            //        DateTime startDay = new DateTime(2020, 01, 01);
-            //        DateTime endDay = new DateTime(2020, 06, 30);
-            //
-            //        double numOfDay = startDay.Subtract(endDay).TotalDays;
-            //
-            //        Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Date"].ToString());
-            //        Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Confirmed"].ToString());
-            //        Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Deaths"].ToString());
-            //    }
-            //}
-            //
+            // Jun
+            foreach (var item in postDataSumCases)
+            {
+                if (item)
+                {
+                    DateTime startDay = new DateTime(2020, 01, 01);
+                    DateTime endDay = new DateTime(2020, 06, 30);
+            
+                    double numOfDay = startDay.Subtract(endDay).TotalDays;
+            
+                    Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Date"].ToString());
+                    Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Confirmed"].ToString());
+                    Console.WriteLine((string)dataTimeline["Data"][Convert.ToInt32(Math.Abs(numOfDay))]["Deaths"].ToString());
+                }
+            }
+            
             //// Jul
             //foreach (var item in postDataSumCases)
             //{
@@ -363,7 +363,7 @@ namespace req_covid19
             ChartReport.Series["Patients"].Points.AddXY("Mar", Convert.ToInt16(getConfirmedMar) - Convert.ToInt16(getConfirmedFeb));
             ChartReport.Series["Patients"].Points.AddXY("Apr", Convert.ToInt16(getConfirmedApr) - Convert.ToInt16(getConfirmedMar));
             ChartReport.Series["Patients"].Points.AddXY("May", Convert.ToInt16(getConfirmedMay) - Convert.ToInt16(getConfirmedApr));
-            //ChartReport.Series["Comfirmed"].Points.AddXY("Jun", Convert.ToInt16(getComfirmedJun) - Convert.ToInt16(getConfirmedMay));
+            ChartReport.Series["Comfirmed"].Points.AddXY("Jun", Convert.ToInt16(getComfirmedJun) - Convert.ToInt16(getConfirmedMay));
             //ChartReport.Series["Comfirmed"].Points.AddXY("Jul", Convert.ToInt16(getComfirmedJul) - Convert.ToInt16(getConfirmedJun));
             //ChartReport.Series["Comfirmed"].Points.AddXY("Aug", Convert.ToInt16(getComfirmedAug) - Convert.ToInt16(getConfirmedJul));
             //ChartReport.Series["Comfirmed"].Points.AddXY("Sep", Convert.ToInt16(getComfirmedSep) - Convert.ToInt16(getConfirmedAug));
